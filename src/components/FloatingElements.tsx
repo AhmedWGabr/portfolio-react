@@ -1,8 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 export default function FloatingElements() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const elements = Array.from({ length: 20 }, (_, i) => ({
     id: i,
     size: Math.random() * 40 + 10,
@@ -11,6 +18,10 @@ export default function FloatingElements() {
     duration: Math.random() * 10 + 15,
     delay: Math.random() * 5,
   }));
+
+  if (!isClient) {
+    return null; // Render nothing on the server
+  }
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
