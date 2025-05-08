@@ -3,12 +3,12 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import { 
-  SiReact, 
-  SiNextdotjs, 
-  SiNodedotjs, 
-  SiTypescript, 
-  SiTailwindcss, 
+import {
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiTypescript,
+  SiTailwindcss,
   SiGit,
   SiJavascript,
   SiHtml5
@@ -40,7 +40,7 @@ export default function Home() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.9]);
-  
+
   // No need to track scroll position since we're using framer-motion's useScroll
 
   const projects = [
@@ -97,7 +97,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
       {/* Hero Section with Enhanced Parallax */}
-      <motion.section 
+      <motion.section
         ref={heroRef}
         className="w-full min-h-screen flex items-center justify-center relative overflow-hidden"
         initial={{ opacity: 0 }}
@@ -105,12 +105,12 @@ export default function Home() {
         transition={{ duration: 1 }}
       >
         <ParallaxBackground />
-        
+
         {/* Decorative elements */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <motion.div 
+          <motion.div
             className="absolute top-1/4 left-10 w-24 h-24 md:w-32 md:h-32 opacity-20"
-            animate={{ 
+            animate={{
               rotate: [0, 360],
               scale: [1, 1.1, 1],
             }}
@@ -122,10 +122,10 @@ export default function Home() {
               <path d="M10 50 L90 50" stroke="currentColor" strokeWidth="2" />
             </svg>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="absolute bottom-1/4 right-10 w-24 h-24 md:w-32 md:h-32 opacity-20"
-            animate={{ 
+            animate={{
               rotate: [0, -360],
               scale: [1, 1.2, 1],
             }}
@@ -137,8 +137,8 @@ export default function Home() {
             </svg>
           </motion.div>
         </div>
-        
-        <motion.div 
+
+        <motion.div
           className="container mx-auto px-4 py-16 text-center relative z-10"
           style={{ y, opacity, scale }}
         >
@@ -147,10 +147,10 @@ export default function Home() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.div 
+            <motion.div
               className="relative inline-block mb-6"
             >
-              <motion.h1 
+              <motion.h1
                 className="text-4xl md:text-6xl font-bold relative z-10"
                 initial={{ scale: 0.95 }}
                 animate={{ scale: 1 }}
@@ -158,14 +158,14 @@ export default function Home() {
               >
                 Hi, I&apos;m Ahmed Wahba
               </motion.h1>
-              <motion.div 
+              <motion.div
                 className="absolute -inset-1 bg-blue-500/10 rounded-lg blur-xl z-0"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               />
             </motion.div>
-            
+
             <div className="relative h-20 mb-8">
               <h2 className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300">
                 <Typewriter
@@ -183,15 +183,15 @@ export default function Home() {
                   }}
                 />
               </h2>
-              <motion.div 
+              <motion.div
                 className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-blue-500/50 rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: '50%' }}
                 transition={{ delay: 1, duration: 1 }}
               />
             </div>
-            
-            <motion.div 
+
+            <motion.div
               className="flex justify-center gap-6 mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -220,7 +220,7 @@ export default function Home() {
                 <span className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">LinkedIn</span>
               </motion.a>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -241,7 +241,7 @@ export default function Home() {
                   →
                 </motion.span>
               </motion.a>
-              
+
               <motion.a
                 href="#projects"
                 className="px-8 py-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 transition-all inline-block"
@@ -271,16 +271,16 @@ export default function Home() {
               }
             }}
           >
-            <svg 
-              className="w-6 h-6" 
-              fill="none" 
-              stroke="currentColor" 
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
                 d="M19 14l-7 7m0 0l-7-7m7 7V3"
               />
             </svg>
@@ -293,7 +293,7 @@ export default function Home() {
         {/* Background decoration */}
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-50 dark:bg-blue-900/20 rounded-bl-full opacity-50" />
         <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-blue-50 dark:bg-blue-900/20 rounded-tr-full opacity-50" />
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial="initial"
@@ -302,7 +302,7 @@ export default function Home() {
             variants={fadeIn}
           >
             <div className="flex flex-col md:flex-row gap-12 items-center">
-              <motion.div 
+              <motion.div
                 className="md:w-1/2"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -312,7 +312,7 @@ export default function Home() {
                 <div className="relative">
                   <h2 className="text-3xl font-bold mb-8 inline-block">
                     About Me
-                    <motion.div 
+                    <motion.div
                       className="absolute -bottom-2 left-0 h-1 bg-blue-500 rounded-full"
                       initial={{ width: 0 }}
                       whileInView={{ width: '100%' }}
@@ -321,20 +321,20 @@ export default function Home() {
                     />
                   </h2>
                 </div>
-                
-                <motion.p 
+
+                <motion.p
                   className="text-lg mb-6 text-gray-700 dark:text-gray-300"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2, duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  I&apos;m a passionate web developer with a strong foundation in modern web technologies. 
-                  My journey in web development began with a deep interest in creating intuitive and engaging user experiences. 
+                  I&apos;m a passionate web developer with a strong foundation in modern web technologies.
+                  My journey in web development began with a deep interest in creating intuitive and engaging user experiences.
                   I specialize in building responsive web applications using React, Next.js, and modern JavaScript.
                 </motion.p>
-                
-                <motion.p 
+
+                <motion.p
                   className="text-lg mb-6 text-gray-700 dark:text-gray-300"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -345,8 +345,8 @@ export default function Home() {
                   My goal is to create beautiful, functional, and accessible web experiences that solve real problems.
                 </motion.p>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="md:w-1/2"
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -355,7 +355,7 @@ export default function Home() {
               >
                 <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
                   <h3 className="text-xl font-semibold mb-4 flex items-center">
-                    <motion.span 
+                    <motion.span
                       className="inline-block mr-2 text-blue-500"
                       animate={{ rotate: [0, 10, 0] }}
                       transition={{ duration: 2, repeat: Infinity }}
@@ -364,7 +364,7 @@ export default function Home() {
                     </motion.span>
                     Experience Highlights
                   </h3>
-                  
+
                   <ul className="space-y-4" aria-label="Experience highlights">
                     {[
                       "Developed and maintained responsive websites using React and Next.js",
@@ -373,17 +373,20 @@ export default function Home() {
                       "Worked with version control systems (Git) and followed Agile methodologies",
                       "Optimized web applications for maximum speed and scalability"
                     ].map((item, index) => (
-                      <motion.li 
-                        key={index} 
+                      <li
+                        key={index}
                         className="flex items-start"
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.1 * index, duration: 0.5 }}
-                        viewport={{ once: true }}
                       >
-                        <span className="mr-2 text-blue-500">•</span>
-                        <span>{item}</span>
-                      </motion.li>
+                        <motion.span
+                          initial={{ opacity: 0, x: 20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ delay: 0.1 * index, duration: 0.5 }}
+                          viewport={{ once: true }}
+                        >
+                          <span className="mr-2 text-blue-500">•</span>
+                          <span>{item}</span>
+                        </motion.span>
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -396,17 +399,17 @@ export default function Home() {
       {/* Skills Section with Animated Skill Bars */}
       <section id="skills" className="w-full py-20 bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
         {/* Decorative background elements */}
-        <motion.div 
+        <motion.div
           className="absolute -top-20 -right-20 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl"
           animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.7, 0.5] }}
           transition={{ duration: 8, repeat: Infinity, repeatType: "reverse" }}
         />
-        <motion.div 
+        <motion.div
           className="absolute -bottom-20 -left-20 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl"
           animate={{ scale: [1, 1.3, 1], opacity: [0.5, 0.7, 0.5] }}
           transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
         />
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial="initial"
@@ -415,7 +418,7 @@ export default function Home() {
             variants={fadeIn}
             className="max-w-5xl mx-auto"
           >
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -424,7 +427,7 @@ export default function Home() {
             >
               <motion.div className="inline-block relative">
                 <h2 className="text-3xl font-bold mb-4">Technical Skills</h2>
-                <motion.div 
+                <motion.div
                   className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-1 bg-blue-500 rounded-full"
                   initial={{ width: 0 }}
                   whileInView={{ width: '80%' }}
@@ -436,7 +439,7 @@ export default function Home() {
                 I&apos;ve developed expertise in various modern web technologies, with a focus on frontend development and responsive design.
               </p>
             </motion.div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {[
                 { icon: SiReact, name: 'React', level: '90%' },
@@ -463,8 +466,8 @@ export default function Home() {
                 </motion.div>
               ))}
             </div>
-            
-            <motion.div 
+
+            <motion.div
               className="mt-16 text-center"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
