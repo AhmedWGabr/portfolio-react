@@ -71,7 +71,7 @@ export default function Home() {
     {
       title: 'Portfolio Website',
       description: 'A modern, responsive portfolio website built with Next.js and Framer Motion for smooth animations.',
-      image: 'https://placehold.co/600x400/2563eb/white?text=Portfolio',
+      image: '/preview images/portfolio-react.png',
       tech: ['Next.js', 'TypeScript', 'Framer Motion', 'Tailwind'],
       live: 'https://portfolio-react-zeta-beige.vercel.app/',
       github: 'https://github.com/AhmedWGabr/portfolio-react'
