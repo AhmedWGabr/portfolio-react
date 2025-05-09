@@ -74,7 +74,7 @@ export default function Home() {
       image: 'https://placehold.co/600x400/2563eb/white?text=Portfolio',
       tech: ['Next.js', 'TypeScript', 'Framer Motion', 'Tailwind'],
       live: 'https://portfolio-react-zeta-beige.vercel.app/',
-      github: 'https://github.com/AhmedWGabr/portfolio'
+      github: 'https://github.com/AhmedWGabr/portfolio-react'
     },
     {
       title: 'Blog Platform',
