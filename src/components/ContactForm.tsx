@@ -60,18 +60,32 @@ export default function ContactForm() {
     }
     
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
-    setSubmitted(true);
-    
-    // Reset form after showing success message
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormState({ name: '', email: '', message: '' });
-      setErrors({ email: '', message: '' });
-    }, 3000);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formState),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormState({ name: '', email: '', message: '' });
+        setErrors({ email: '', message: '' });
+        setTimeout(() => setSubmitted(false), 3000); // Hide success message after 3 seconds
+      } else {
+        // Handle errors, maybe show an error message to the user
+        console.error('Form submission failed:', response.statusText);
+        alert('Failed to send message. Please try again later.'); // Simple error handling
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('An error occurred. Please try again later.'); // Simple error handling
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

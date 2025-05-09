@@ -198,7 +198,7 @@ export default function Home() {
               transition={{ delay: 0.4 }}
             >
               <motion.a
-                href="https://github.com/AhmedWGabr"
+                href="https://github.com/AhmedWGabr?tab=repositories"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub Profile"
@@ -209,7 +209,7 @@ export default function Home() {
                 <span className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">GitHub</span>
               </motion.a>
               <motion.a
-                href="https://linkedin.com/in/AhmedWGabr"
+                href="https://www.linkedin.com/in/ahmedwgabr"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn Profile"
@@ -533,7 +533,7 @@ export default function Home() {
             transition={{ delay: 0.5 }}
           >
             <a
-              href="https://github.com/AhmedWGabr"
+              href="https://github.com/AhmedWGabr?tab=repositories"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"
@@ -558,7 +558,7 @@ export default function Home() {
             <div className="max-w-md mx-auto">
               <div className="flex justify-center gap-8 mb-12">
                 <motion.a
-                  href="mailto:your.email@example.com"
+                  href="mailto:ahmed.wahba.gabr@gmail.com"
                   className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                   whileHover={{ scale: 1.05 }}
                 >
@@ -566,7 +566,7 @@ export default function Home() {
                   <span>Email Me</span>
                 </motion.a>
                 <motion.a
-                  href="https://linkedin.com/in/YourLinkedIn"
+                  href="https://www.linkedin.com/in/ahmedwgabr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
