@@ -50,7 +50,7 @@ export default function Home() {
       image: 'https://placehold.co/600x400/2563eb/white?text=E-commerce+Platform',
       tech: ['Next.js', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind'],
       live: 'https://ecommerce-demo.com',
-      github: 'https://github.com/yourusername/ecommerce'
+      github: 'https://github.com/AhmedWGabr/ecommerce'
     },
     {
       title: 'Task Management Dashboard',
@@ -58,7 +58,7 @@ export default function Home() {
       image: 'https://placehold.co/600x400/2563eb/white?text=Task+Management',
       tech: ['React', 'TypeScript', 'Firebase', 'Material-UI'],
       live: 'https://task-manager-demo.com',
-      github: 'https://github.com/yourusername/task-manager'
+      github: 'https://github.com/AhmedWGabr/task-manager'
     },
     {
       title: 'Weather Dashboard',
@@ -66,15 +66,15 @@ export default function Home() {
       image: 'https://placehold.co/600x400/2563eb/white?text=Weather+App',
       tech: ['JavaScript', 'Chart.js', 'REST API', 'CSS3'],
       live: 'https://weather-app-demo.com',
-      github: 'https://github.com/yourusername/weather-app'
+      github: 'https://github.com/AhmedWGabr/weather-app'
     },
     {
       title: 'Portfolio Website',
       description: 'A modern, responsive portfolio website built with Next.js and Framer Motion for smooth animations.',
       image: 'https://placehold.co/600x400/2563eb/white?text=Portfolio',
       tech: ['Next.js', 'TypeScript', 'Framer Motion', 'Tailwind'],
-      live: '#',
-      github: 'https://github.com/yourusername/portfolio'
+      live: 'https://portfolio-react-zeta-beige.vercel.app/',
+      github: 'https://github.com/AhmedWGabr/portfolio'
     },
     {
       title: 'Blog Platform',
@@ -82,7 +82,7 @@ export default function Home() {
       image: 'https://placehold.co/600x400/2563eb/white?text=Blog+Platform',
       tech: ['Next.js', 'MongoDB', 'OAuth', 'MDX'],
       live: 'https://blog-demo.com',
-      github: 'https://github.com/yourusername/blog'
+      github: 'https://github.com/AhmedWGabr/blog'
     },
     {
       title: 'Recipe Finder App',
@@ -90,7 +90,7 @@ export default function Home() {
       image: 'https://placehold.co/600x400/2563eb/white?text=Recipe+Finder',
       tech: ['React', 'Redux', 'API Integration', 'Styled Components'],
       live: 'https://recipe-finder-demo.com',
-      github: 'https://github.com/yourusername/recipe-finder'
+      github: 'https://github.com/AhmedWGabr/recipe-finder'
     }
   ];
 
@@ -198,7 +198,7 @@ export default function Home() {
               transition={{ delay: 0.4 }}
             >
               <motion.a
-                href="https://github.com/YourGitHub"
+                href="https://github.com/AhmedWGabr"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub Profile"
@@ -209,7 +209,7 @@ export default function Home() {
                 <span className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">GitHub</span>
               </motion.a>
               <motion.a
-                href="https://linkedin.com/in/YourLinkedIn"
+                href="https://linkedin.com/in/AhmedWGabr"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn Profile"
