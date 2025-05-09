@@ -12,6 +12,7 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export',
+  basePath: '/portfolio-react', // Add the repository name as the base path
 };
 
 export default nextConfig;
